@@ -68,6 +68,34 @@ Edit `data/team.ts` and update each member:
 
 ---
 
+## Deploy to Vercel or Netlify
+
+### Vercel (recommended)
+
+1. Push code to GitHub
+2. Go to [vercel.com](https://vercel.com) → Import your repo
+3. **Root Directory:** If repo root is `esel-website`, set it in project settings
+4. Framework preset: **Next.js** (auto-detected)
+5. Deploy
+
+### Netlify
+
+1. Push code to GitHub
+2. Go to [netlify.com](https://netlify.com) → Add new site → Import from Git
+3. **Root Directory:** Set to `esel-website` if it's in a subfolder
+4. **Build command:** `npm run build`
+5. **Publish directory:** Leave empty (Next.js plugin handles it)
+6. Enable **Next.js runtime** in Site settings → Build & deploy → Environment
+7. Deploy
+
+### Fixing 404 Errors
+
+- **Root directory:** If your project is in `esel-website/` subfolder, set **Root Directory** to `esel-website` in both Vercel and Netlify
+- **Node version:** Use Node 18+ (`.nvmrc` is included)
+- **Build logs:** Check build logs for errors before deploy
+
+---
+
 ## Build for Production
 
 ```bash
